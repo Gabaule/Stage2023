@@ -75,13 +75,13 @@ Ajouter la ligne suivante : `/pxeboot *(ro,sync,no_wdelay,insecure_locks,no_root
 Pour rendre le partage disponible : `exportfs -av`
 
 ## Servir un OS à booter
-Télecharger l'ISO de l'OS voulue via wget `wget <link-to-ISO>`
-Monter l'ISO `mount -o loop path/to/ISO /mnt`
-Créer un dossier où sera mis le contenu de l'ISO :  `mkdir -pv /pxeboot/os-images/<ISO-name>`
-Copier le contenu de l'ISO : `rsync -avz /mnt/ /pxeboot/os-images/<ISO-name>/`
-Démonter l'ISO : `umount /mnt`
+Télecharger l'ISO de l'OS voulue via wget `wget <link-to-ISO>`  
+Monter l'ISO `mount -o loop path/to/ISO /mnt`  
+Créer un dossier où sera mis le contenu de l'ISO :  `mkdir -pv /pxeboot/os-images/<ISO-name>`  
+Copier le contenu de l'ISO : `rsync -avz /mnt/ /pxeboot/os-images/<ISO-name>/`  
+Démonter l'ISO : `umount /mnt`  
 
-Créer le fichier de configuration pour le boot des ISO : `nano /pxeboot/config/boot.ipxe`
+Créer le fichier de configuration pour le boot des ISO : `nano /pxeboot/config/boot.ipxe`  
 Lui ajouter le contenu suivant :
 ```bash
 #!ipxe
