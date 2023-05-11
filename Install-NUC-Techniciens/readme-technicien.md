@@ -2,7 +2,8 @@
 
 ## Matériel nécessaire
 
-Voici une liste du matériel nécessaire : 
+Voici une liste du matériel nécessaire :
+
 - Un tournevis cruciforme
 - Un clavier
 - Une souris
@@ -10,16 +11,17 @@ Voici une liste du matériel nécessaire :
 - Un câble HDMI
 - Un câble Ethernet
 
-## Matériel fourni :
+## Matériel fourni
 
 Voici une liste du matériel qui doit être fourni
+
 - NUC Intel avec son alimentation
 - Barette de RAM DDR4 au format SO-DIMM
 - SSD au format NVME
 
 ![Matériel recu](./images/NUC/01-kit-recu.jpg)
 
-## Installation du matériel dans le NUC :
+## Installation du matériel dans le NUC
 
 - Sortir le unc de sa boite et retirer les plastiques qui le protège
 - Le positionner face avant vers soi (seulement 2 ports usb sont alors apparents)
@@ -43,7 +45,7 @@ Voici une liste du matériel qui doit être fourni
 - Refermer le boitier (attention il y a un sens, la flèche dessinées avec la mention "FRONT" doit pointer vers les 2 ports usb bleus situés à l'avant du boitier)
 ![Reinstallation de la plaque arrière](./images/NUC/plaque-remise.jpg)
 
-## Branchement du NUC :
+## Branchement du NUC
 
 Brancher un câble hdmi sur un écran et le relier au NUC sur leport HDMI 1 (écrit au dessus) , faire de même avec câble ethernet,le clavier et la souris. Puis finir de brancher le NUC en reliant l'alimentation à ce dernier.
 
@@ -54,7 +56,7 @@ Allumer l'ecran puis le NUC via son bouton dédié sur la façade avant. Puis ap
 Sur le premier écran taper sur la touche "entrée" et saisir le mot de passe "qd,in"
 ![Premier mot de passe](./images/VPro/Vpro-Password1.png)
 
-Saisir le nouveau mot de passe "1*xg9ioV" (on prendra soin d'utiilser le pavé numérique pour les chiffres et l'astérisque), appuyer sur la touche "entree" puis re-entrer le mot de passe pour valider.   
+Saisir le nouveau mot de passe "1*xg9ioV" (on prendra soin d'utiilser le pavé numérique pour les chiffres et l'astérisque), appuyer sur la touche "entree" puis re-entrer le mot de passe pour valider.  
 Activer la fonction AMt comme dans l'image ci-dessous
 ![Activation AMT](./images/VPro/Vpro-ActivationAMT.png)
 Sortir du menu avec la touche "échap", puis rentrer dans le menu "intel amt configuration"  
@@ -70,7 +72,7 @@ Sortir du menu et activer l'option "activate network access" et valider avec la 
 
 Passer au sous menu Network setup : mettre les options DHCP en false et remplir les champs avec ce qui à été fourni par la production
 ![Config AMT 4](./images/VPro/Vpro-AMTConfig4.png)
-![Config AMT 5](./images/VPro/Vpro-AMTConfig5.png)   
+![Config AMT 5](./images/VPro/Vpro-AMTConfig5.png)  
 Puis passer au menu "power control" et mettre la valeur du "IDLE timeout" à 1800  
 
 ![Config AMT 6](./images/VPro/Vpro-AMTConfig6.png)
