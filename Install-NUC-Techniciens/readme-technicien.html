@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme-technicien.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="installation-dun-nuc-intel-partie-sur-place">Installation d'un NUC intel partie sur place</h1>
+<h2 id="mat%C3%A9riel-n%C3%A9cessaire">Matériel nécessaire</h2>
+<p>Voici une liste du matériel nécessaire :</p>
+<ul>
+<li>Un tournevis cruciforme</li>
+<li>Un clavier</li>
+<li>Une souris</li>
+<li>Un écran</li>
+<li>Un câble HDMI</li>
+<li>Un câble Ethernet</li>
+</ul>
+<h2 id="mat%C3%A9riel-fourni">Matériel fourni :</h2>
+<p>Voici une liste du matériel qui doit être fourni</p>
+<ul>
+<li>NUC Intel avec son alimentation</li>
+<li>Barette de RAM DDR4 au format SO-DIMM</li>
+<li>SSD au format NVME</li>
+</ul>
+<p><img src="./images/NUC/01-kit-recu.jpg" alt="Matériel recu"></p>
+<h2 id="installation-du-mat%C3%A9riel-dans-le-nuc">Installation du matériel dans le NUC :</h2>
+<ul>
+<li>Sortir le unc de sa boite et retirer les plastiques qui le protège</li>
+<li>Le positionner face avant vers soi (seulement 2 ports usb sont alors apparents)</li>
+<li>Le retourner afin d'avoir le dessous sur le haut (les patins avec les vis sont alors visibles)
+<img src="./images/NUC/face-dessous.jpg" alt="NUC face dessous"></li>
+<li>A l'aide du tournevis déserrer les vis (ce sont des vis sans fin)
+<img src="./images/NUC/demontage-vis.jpg" alt="NUC Vis démontées"></li>
+<li>Retirer doucement la plaque arrière en tirant par 2 vis en diagonale
+<img src="./images/NUC/enlevement-plaque-dessous.jpg" alt="Enlevement de la plaque dessous">
+<img src="./images/NUC/carte-mere-vide.jpg" alt="Carte mère visible"></li>
+<li>Ouvrir le paquet contenant la RAM et la positionner face au port à droite situé le plus en profondeur, insérer la doucement en biais, puis abaisser la barette doucement jusqu'a ce qu'un clic se fasse entendre
+<img src="./images/NUC/ram-1.jpg" alt="Photos de la ram">
+<img src="./images/NUC/ram-2.jpg" alt="Photos de la ram">
+<img src="./images/NUC/ram-3.jpg" alt="Photos de la ram">
+<img src="./images/NUC/ram-4.jpg" alt="Photos de la ram"></li>
+<li>Retirer la vis se situant au dessus de la carte WIFI (en face de l'étiquette avec la mention &quot;NVMe ONLY)
+<img src="./images/NUC/ssd-2.jpg" alt="Photos de l'emplacement SSD"></li>
+<li>Ouvrir le sachet contenant le SSD , l'insérer en biais dans le slot en respectant le détrompeur, puis appuyer pour mettre le SSD à plat, enfin revenir visser par-dessus
+<img src="./images/NUC/ssd-1.jpg" alt="Isntallation SSD">
+<img src="./images/NUC/ssd-3.jpg" alt="Isntallation SSD"></li>
+<li>Refermer le boitier (attention il y a un sens, la flèche dessinées avec la mention &quot;FRONT&quot; doit pointer vers les 2 ports usb bleus situés à l'avant du boitier)
+<img src="./images/NUC/plaque-remise.jpg" alt="Reinstallation de la plaque arrière"></li>
+</ul>
+<h2 id="branchement-du-nuc">Branchement du NUC :</h2>
+<p>Brancher un câble hdmi sur un écran et le relier au NUC sur leport HDMI 1 (écrit au dessus) , faire de même avec câble ethernet,le clavier et la souris. Puis finir de brancher le NUC en reliant l'alimentation à ce dernier.</p>
+<h2 id="d%C3%A9marrage-du-nuc-et-installation-de-la-partie-v-pro">Démarrage du NUC et installation de la partie V-Pro</h2>
+<p>Allumer l'ecran puis le NUC via son bouton dédié sur la façade avant. Puis appuyer simultanément sur les touches &quot;control&quot; et &quot;p&quot; de votre clavier jusqu'à l'apparition d'un écran gris et bleu. Si cela ne marche pas, appuyer sur les touches &quot;control&quot;,&quot;alt&quot; et &quot;suppr&quot; pour recommncer l'étape.<br>
+<img src="./images/VPro/Vpro-Accueil.png" alt="Premier écran du V-Pro">
+Sur le premier écran taper sur la touche &quot;entrée&quot; et saisir le mot de passe &quot;qd,in&quot;
+<img src="./images/VPro/Vpro-Password1.png" alt="Premier mot de passe"></p>
+<p>Saisir le nouveau mot de passe &quot;1*xg9ioV&quot; (on prendra soin d'utiilser le pavé numérique pour les chiffres et l'astérisque), appuyer sur la touche &quot;entree&quot; puis re-entrer le mot de passe pour valider.<br>
+Activer la fonction AMt comme dans l'image ci-dessous
+<img src="./images/VPro/Vpro-ActivationAMT.png" alt="Activation AMT">
+Sortir du menu avec la touche &quot;échap&quot;, puis rentrer dans le menu &quot;intel amt configuration&quot;<br>
+<img src="./images/VPro/Vpro-AMTConfig1.png" alt="Config AMT 1"></p>
+<p>Puis dans le sous-menu &quot;user consent&quot; passer les valeurs :
+User Opt-in -&gt; none
+Opt-in configurable from Remote IT -&gt; Enable
+<img src="./images/VPro/Vpro-AMTConfig2.png" alt="Config AMT 2">
+<img src="./images/VPro/Vpro-AMTConfig3.png" alt="Config AMT 3"></p>
+<p>Sortir du menu et activer l'option &quot;activate network access&quot; et valider avec la touche &quot;y&quot;</p>
+<p>Passer au sous menu Network setup : mettre les options DHCP en false et remplir les champs avec ce qui à été fourni par la production
+<img src="./images/VPro/Vpro-AMTConfig4.png" alt="Config AMT 4">
+<img src="./images/VPro/Vpro-AMTConfig5.png" alt="Config AMT 5"><br>
+Puis passer au menu &quot;power control&quot; et mettre la valeur du &quot;IDLE timeout&quot; à 1800</p>
+<p><img src="./images/VPro/Vpro-AMTConfig6.png" alt="Config AMT 6">
+<img src="./images/VPro/Vpro-AMTConfig7.png" alt="Config AMT 7">
+<img src="./images/VPro/Vpro-AMTConfig8.png" alt="Config AMT 8"></p>
+<p>Quitter avec la touche échap et penser à valider avec la touche &quot;Y&quot;<br>
+<img src="./images/VPro/Vpro-AMTConfig9.png" alt="Config AMT 9"></p>
+
+</body>
+</html>
